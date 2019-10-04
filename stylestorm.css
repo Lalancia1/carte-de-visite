@@ -1,0 +1,48 @@
+body{
+
+    margin:0;
+    padding:0;
+    user-select:none;
+    tap-highlight-color: none;
+
+}
+#viewport{
+    border:5px solid;
+    position:relative;
+    height: 500px;
+    width: 80%;
+    margin :auto;/*rendre le cadre responsible*/
+
+    overflow:hidden;/*pour que les elements ne débordent pas du cadre*/
+    margin-top:30px;
+    boder-radius:1.2em;
+    border-color: #fd9800;
+    min-width: 500px;
+    max-width: 900px;
+}
+#kenny{
+    background: url("roue.jpg");
+    background-size : 100% 100%;
+    width :32px;
+    height:32px;
+    position:absolute;
+    top:200px;
+    left:50px;
+
+}
+.bomb-animation{
+    animation:bomb-play 1s steps(11);/*steps indique qu'il y'a 11étapes*/
+    animation-fill-mode: forwards;
+}
+@ keyframes bom-play{
+    100%{background-position:-715px;}
+  }
+.screen
+{
+    transform: translate3d(-9999px,0,0);/*3D ON EST OBLIGE DE METTRE (x,y,z)*/
+    height:100% ;
+}
+.screen.toggle
+{
+    transform: translate3d(0,0,0);
+}
